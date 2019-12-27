@@ -84,3 +84,21 @@ sessions.findOne({ user_id: email })
 **Answer**
 
 5a8d8ee2f9588ca2701894be
+
+## Ticket: Durable Writes
+**Task**
+
+For this ticket, you'll be required to increase the durability of the addUser method in UsersDAO.js from the default write concern of w: 1.
+
+When a new user registers for MFlix, their information must be added to the database before they can do anything else on the site. For this reason, we want to make sure that the data written by the addUser method will not be rolled back in the case of a network or server error.
+
+We can decrease the chances of a rollback by increasing the write durability of the addUser method. To use a non-default write concern with the insert() method, pass a new Object to the method specifying the level of write concern. You can read more about this in the Node.js docs.
+
+**Solution**
+```
+users.insertOne({ name, password, email }, { w: "majority" })
+```
+
+**Answer**
+
+w: "majority", w: 2
