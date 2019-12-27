@@ -102,3 +102,20 @@ users.insertOne({ name, password, email }, { w: "majority" })
 **Answer**
 
 w: "majority", w: 2
+
+## Ticket: User Preferences
+**Task**
+
+For this Ticket, you'll be required to implement one method in usersDAO.js, updatePreferences. This method allows updates to be made to the "preferences" field in the users collection.
+
+**Solution**
+```
+users.updateOne(
+  { email },
+  { $set: { preferences } },
+)
+```
+
+**Answer**
+
+5aabe31503ac76bc4f73e267
