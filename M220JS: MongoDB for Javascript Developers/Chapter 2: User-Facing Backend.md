@@ -119,3 +119,50 @@ users.updateOne(
 **Answer**
 
 5aabe31503ac76bc4f73e267
+
+## Ticket: Get Comments
+**Task**
+
+Modify the getMovieByID method in moviesDAO.js so that it also fetches the comments for a given movie.
+
+The comments should be returned in order from most recent to least recent using the date key.
+
+Movie comments are stored in the comments collection, so this task can be accomplished by performing a $lookup. Refer to the Aggregation Quick Reference for the specific syntax.
+
+**Solution**
+```
+const pipeline = [
+  {
+    $match: {
+      _id: ObjectId(id)
+    }
+  },
+  {
+    $lookup: {
+      from: 'comments',
+      let: {
+        id: '$_id'
+      },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ['$movie_id', '$$id']
+            }
+          }
+        },
+        {
+          $sort: {
+            date: -1
+          }
+        }
+      ],
+      as: 'comments'
+    }
+  }
+]
+```
+
+**Answer**
+
+5ab5094fb526e43b570e4633
