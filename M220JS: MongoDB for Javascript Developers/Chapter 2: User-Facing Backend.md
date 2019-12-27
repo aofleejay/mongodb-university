@@ -166,3 +166,39 @@ const pipeline = [
 **Answer**
 
 5ab5094fb526e43b570e4633
+
+## Ticket: Create/Update Comments
+**Task**
+
+For this ticket, you'll be required to implement two methods in commentsDAO.js, addComment and updateComment.
+
+Ensure that updateComment only allows users to update their own comments, and no one else's comments.
+
+Note:
+
+Remember to wrap the commentId argument with ObjectId(), e.g. ObjectId(commentId). This is the expected format of the _id field.
+
+**Solution**
+
+addComment
+```
+const commentDoc = {
+  name: user.name,
+  email: user.email,
+  movie_id: ObjectId(movieId),
+  text: comment,
+  date,
+}
+```
+
+updateComment
+```
+comments.updateOne(
+  { email: userEmail, _id: commentId },
+  { $set: { text, date } },
+)
+```
+
+**Answer**
+
+5aba8d5113910c25d7058f8f
