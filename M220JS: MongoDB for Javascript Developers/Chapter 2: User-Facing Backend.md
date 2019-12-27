@@ -202,3 +202,21 @@ comments.updateOne(
 **Answer**
 
 5aba8d5113910c25d7058f8f
+
+## Ticket: Delete Comments
+**Task**
+
+For this ticket, you'll be required to modify one method in commentsDAO.js, deleteComment. Ensure the delete operation is limited so only the user can delete their own comments, but not anyone else's comments.
+
+**Solution**
+
+```
+comments.deleteOne({
+  _id: ObjectId(commentId),
+  email: userEmail,
+})
+```
+
+**Answer**
+
+5ac25c280a80ed6e67e1cecb
