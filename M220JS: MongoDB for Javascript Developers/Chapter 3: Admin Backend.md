@@ -36,3 +36,37 @@ const pipeline = [
 **Answer**
 
 5accad3272455e5db79e4dad
+
+## Ticket: Migration
+**Task**
+
+For this ticket, you'll be required to complete the command-line script located in the migrations directory of src called movie-last-updated-migration.js.
+
+Things always change, and a requirement has come down that the lastupdated value in each document of the movies collection needs to be stored as an ISODate rather than a String.
+
+Complete the script so it updates the format of lastupdated using a bulk write. You can find the exact Node.js syntax in the docs.
+
+To perform the migration, run the script:
+
+```
+node movie-last-updated-migration.js
+```
+
+**Solution**
+
+Query and projection
+```
+const predicate = { lastupdated: { $type: "string", $exists: true } }
+const projection = { lastupdated: 1 }
+```
+
+Bulk write
+```
+mflix
+  .collection("movies")
+  .bulkWrite(moviesToMigrate)
+```
+
+**Answer**
+
+5ad9f6a64fec134d116fb06f
