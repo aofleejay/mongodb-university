@@ -1,5 +1,7 @@
 # Chapter 2: The MongoDB Query Language + Atlas
+
 ## Lab 2.1: How Many Comedies?
+
 **Question**
 
 How many documents in video.movieDetails match the filter {genres: "Comedy"}?
@@ -9,9 +11,11 @@ How many documents in video.movieDetails match the filter {genres: "Comedy"}?
 749.
 
 ## Lab 2.2: How Many Inserted?
+
 **Question**
 
 If the collection video.myMovies is currently empty, how many documents would be inserted by the following call to insertMany().
+
 ```
 db.myMovies.insertMany(
   [
@@ -57,6 +61,7 @@ db.myMovies.insertMany(
 4.
 
 ## Lab 2.3: Queries on Scalar Fields
+
 **Question**
 
 Explore the movieDetails collection that you loaded into your Atlas sandbox cluster and then issue a query to answer the following question. How many movies in the movieDetails collection are rated PG and have exactly 10 award nominations?
@@ -68,6 +73,7 @@ You will find the count() method useful in answering this question using the mon
 3.
 
 ## Lab 2.4: Queries on Array Fields, Part 1
+
 **Question**
 
 Explore the movieDetails collection that you loaded into your Atlas sandbox cluster and then issue a query to answer the following question. How many movies in the movieDetails collection list "Family" among its genres?
@@ -79,6 +85,7 @@ You will find the count() method useful in answering this question using the mon
 124.
 
 ## Lab 2.5: Queries on Array Fields, Part 2
+
 **Question**
 
 Explore the movieDetails collection that you loaded into your Atlas sandbox cluster and then issue a query to answer the following question. How many movies in the movieDetails collection list "Western" second among its genres?
@@ -90,10 +97,11 @@ You will find the count() method useful in answering this question using the mon
 14.
 
 ## Lab 2.6: Update Operators
+
 **Question**
 
 Suppose you wish to update the value of the plot field for one document in our movieDetails collection to correct a typo. Which of the following update operators and modifiers would you need to use to do this?
 
 **Answer**
 
-$set.
+\$set.

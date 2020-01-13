@@ -1,5 +1,7 @@
 # Chapter 1: Driver Setup
+
 ## Ticket: Connection
+
 **Task**
 
 MFlix will use MongoDB as a storage layer, so for this ticket you will build a connection from MFlix to Atlas.
@@ -7,8 +9,8 @@ MFlix will use MongoDB as a storage layer, so for this ticket you will build a c
 Note: These instructions were included in the README.rst. If you already completed the .env file, you can skip to Testing and Running the Application.
 
 1. First, make sure you've created a user on your Atlas cluster with read and write access to the mflix database.
-The user name should be m220student and the password should be m220password.
-Don't forget to whitelist your IP address!
+   The user name should be m220student and the password should be m220password.
+   Don't forget to whitelist your IP address!
 2. Copy the connection string. Select that you'd like to connect with the Mongo shell, version 3.6 or later. This will give you the srv connection string.
 3. Locate the file called dotenv_win or dotenv_unix (depending on your operating system) and replace the information within with your own srv connection string:
 
@@ -46,9 +48,10 @@ notepad .env  # on Windows
 5a9026003a466d5ac6497a9d
 
 ## Ticket: Projection
+
 **Task**
 
-Implement the getMoviesByCountry method in src/dao/moviesDAO.js to search movies by country and use projection to return the title field. The _id field will be returned by default
+Implement the getMoviesByCountry method in src/dao/moviesDAO.js to search movies by country and use projection to return the title field. The \_id field will be returned by default
 
 **Solution**
 
@@ -64,6 +67,7 @@ cursor = await movies.find(
 5a94762f949291c47fa6474d
 
 ## Ticket: Text and Subfield Search
+
 **Task**
 
 For this ticket, you will need to modify the method genreSearchQuery in moviesDAO.js to allow the following movie search criteria:

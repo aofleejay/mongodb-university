@@ -2,6 +2,9 @@
   "name": "mongodb-university",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore \"**/*.+(json|md)\" --write"
+  },
   "repository": "https://github.com/aofleejay/mongodb-university.git",
   "author": "aofleejay",
   "license": "MIT",

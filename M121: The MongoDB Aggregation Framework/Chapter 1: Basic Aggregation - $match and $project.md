@@ -1,5 +1,7 @@
 # Chapter 1: Basic Aggregation - $match and $project
-## Lab - $match
+
+## Lab - \$match
+
 **Question**
 
 Help MongoDB pick a movie our next movie night! Based on employee polling, we've decided that potential movies must meet the following criteria.
@@ -34,7 +36,8 @@ What is the answer?
 
 15.
 
-## Lab - Changing Document Shape with $project
+## Lab - Changing Document Shape with \$project
+
 **Question**
 
 Our first movie night was a success. Unfortunately, our ISP called to let us know we're close to our bandwidth quota, but we need another movie recommendation!
@@ -66,6 +69,7 @@ What is the answer?
 15.
 
 ## Lab - Computing Fields
+
 **Question**
 
 Our movies dataset has a lot of different documents, some with more convoluted titles than others. If we'd like to analyze our collection to find movie titles that are composed of only one word, we could fetch all the movies in the dataset and do some processing in a client application, but the Aggregation Framework allows us to do this on the server!

@@ -1,5 +1,7 @@
 # Chapter 2: Basic Aggregation - Utility Stages
+
 ## Lab: Using Cursor-like Stages
+
 **Question**
 
 MongoDB has another movie night scheduled. This time, we polled employees for their favorite actress or actor, and got these results
@@ -24,6 +26,7 @@ What is the title of the 25th film in the aggregation result?
 The Heat
 
 ## Lab - Bringing it all together
+
 **Question**
 
 Calculate an average rating for each movie in our collection where English is an available language, the minimum imdb.rating is at least 1, the minimum imdb.votes is at least 1, and it was released in 1990 or after. You'll be required to rescale (or normalize) imdb.votes. The formula to rescale imdb.votes and calculate normalized_rating is included as a handout.

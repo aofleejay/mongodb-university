@@ -1,5 +1,7 @@
 # Final Exam
+
 ## Final Exam: Question 1
+
 **Question**
 
 Connect to our class Atlas cluster from Compass and view the citibike.trips collection.
@@ -11,6 +13,7 @@ Use the schema view and any filters you feel are necessary to determine the rang
 "Subscriber" and "Customer".
 
 ## Final Exam: Question 2
+
 **Question**
 
 Connect to our class Atlas cluster from Compass and view the 100YWeatherSmall.data collection.
@@ -22,6 +25,7 @@ Using the Schema view, explore the wind field. The wind field has the value type
 Three fields -- two with the value type "document", one with the value type "string".
 
 ## Final Exam: Question 3
+
 **Question**
 
 Connect to our class Atlas cluster from Compass and view the 100YWeatherSmall.data collection.
@@ -33,6 +37,7 @@ What is the value type of the "wind.speed.rate" field?
 double.
 
 ## Final Exam: Question 4
+
 **Question**
 
 Please connect to our class Atlas cluster and view the citibike database.
@@ -44,6 +49,7 @@ How many documents in the citibike.trips collection have the key tripduration se
 2.
 
 ## Final Exam: Question 5
+
 **Question**
 
 Please connect to our class Atlas cluster and view the video.movies collection.
@@ -60,9 +66,10 @@ NOTE: We are not asking you to consider specifically which documents would be ou
 
 **Answer**
 
-db.movies.find({}, {title: 1, _id: 0}).
+db.movies.find({}, {title: 1, \_id: 0}).
 
 ## Final Exam: Question 6
+
 **Question**
 
 Please connect to our class Atlas cluster from the mongo shell or Compass and view the video.movies collection.
