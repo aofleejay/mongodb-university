@@ -94,3 +94,24 @@ static async getMovieByID(id) {
 **Answer**
 
 5ae9b76a703c7c603202ef22
+
+## Ticket: Principle of Least Privilege
+**Task**
+
+For this ticket, you'll be required to add a new user on your Atlas cluster for the MFlix application to connect with.
+
+The user should follow credentials:
+
+username: mflixAppUser
+password: mflixAppPwd
+This user should have the readWrite role on the sample_mflix database. Use Add Default Privileges to assign the user this specific role.
+
+After you have created this user, modify the SRV connection string in your configuration file so the application connects with the new username and password.
+
+**Solution**
+
+Go to MongoDB Atlas and select `Database Access` in `Security` tab. Choose `Add new user` then select `Default Privileges` and add role `readWrite` on `sample_mflix`.
+
+**Answer**
+
+5b61be29094dbae03bf30616
