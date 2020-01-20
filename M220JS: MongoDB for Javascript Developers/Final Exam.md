@@ -75,3 +75,87 @@ Which of the following update statements will correctly perform this update?
 ```
 phones.updateMany({ software_version: { "$lt": 4.0 } }, { "$set": { needs_to_update: true } })
 ```
+
+
+## Final: Question 3
+
+**Question**
+
+Suppose an instance of MongoClient is created with the following settings:
+
+```
+import { MongoClient } from "mongodb"
+
+const URI = "mongodb+srv://m220-user:m220-pass@m220-test.mongodb.net/test"
+
+const testClient = await MongoClient.connect(
+  URI,
+  {
+    authSource: "admin",
+    connectTimeoutMS: 50,
+    retryWrites: true,
+    useNewUrlParser: true
+  },
+)
+
+const clientOptions = testClient.s.options
+```
+
+The variable representing our client, testClient, will:
+
+**Answer**
+
+- [x] automatically retry writes that fail.
+- [x] wait at most 50 milliseconds for timing out a connection.
+- [ ] authenticate against the test database.
+- [ ] allow a maximum of 50 connections in the connection pool.
+- [x] use SSL when connecting to MongoDB.
+
+## Final: Question 4
+
+**Question**
+
+Suppose a client application is sending writes to a replica set with 3 nodes:
+
+Before returning an acknowledgement back to the client, the replica set waits.
+
+When the write has been applied by the nodes marked in stripes, it returns an acknowledgement back to the client.
+
+What Write Concern was used in this operation?
+
+**Answer**
+
+- [ ] w: 1
+- [ ] w: available
+- [x] w: majority
+- [ ] w: 0
+
+## Final: Question 5
+
+**Question**
+
+Given the following bulk write statement, to a collection called employees:
+
+```
+const baseballPlayers = [
+  { insertOne: { '_id': 11, 'name': 'Edgar Martinez', 'salary': "8.5M" }},    // Insert #1
+  { insertOne: { '_id': 3, 'name': 'Alex Rodriguez', 'salary': "18.3M" }},    // Insert #2
+  { insertOne: { '_id': 24, 'name': 'Ken Griffey Jr.', 'salary': "12.4M" }},  // Insert #3
+  { insertOne: { '_id': 11, 'name': 'David Bell', 'salary': "2.5M" }},        // Insert #4
+  { insertOne: { '_id': 19, 'name': 'Jay Buhner', 'salary': "5.1M" }}         // Insert #5
+]
+
+const bulkWriteResponse = employees.bulkWrite(baseballPlayers)
+```
+
+Assume the employees collection is empty, and that there were no network errors in the execution of the bulk write.
+
+Which of the insert operations in requests will succeed?
+
+**Answer**
+
+- [x] Insert #1
+- [x] Insert #2
+- [x] Insert #3
+- [ ] Insert #4
+- [ ] Insert #5
