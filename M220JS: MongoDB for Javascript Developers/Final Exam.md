@@ -125,10 +125,7 @@ What Write Concern was used in this operation?
 
 **Answer**
 
-- [ ] w: 1
-- [ ] w: available
-- [x] w: majority
-- [ ] w: 0
+w: majority
 
 ## Final: Question 5
 
@@ -159,3 +156,38 @@ Which of the insert operations in requests will succeed?
 - [x] Insert #3
 - [ ] Insert #4
 - [ ] Insert #5
+
+## Final: Question 6
+
+**Question**
+
+Suppose a client application is sending writes to a replica set with three nodes, but the primary node stops responding:
+
+Assume that none of the connection settings have been changed, and that the client is only sending insert statements with write concern w: 1 to the server.
+
+After 30 seconds, the client still cannot connect to a new primary. Which of the following errors will be thrown by the Node.js driver, and how should it be handled?
+
+**Answer**
+
+a Timeout error, resolved by wrapping the call in a try/catch block
+
+## Final: Question 7
+
+**Question**
+
+Assume a collection called people_heights with documents that look like this:
+
+```
+{
+  name: "Ada",
+  height: 1.7
+}
+```
+
+Which of the following queries will find only the 4th- and 5th-tallest people in the people_heights collection?
+
+**Answer**
+
+```
+people_heights.find().sort({ height: -1 }).skip(3).limit(2)
+```
