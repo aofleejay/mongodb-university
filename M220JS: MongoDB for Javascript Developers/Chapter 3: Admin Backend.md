@@ -1,5 +1,7 @@
 # Chapter 3: Admin Backend
+
 ## Ticket: User Report
+
 **Task**
 
 For this ticket, you'll be required to modify one method in commentsDAO.js, mostActiveCommenters. This method produces a report of the 20 most frequent commenters on the MFlix site.
@@ -38,6 +40,7 @@ const pipeline = [
 5accad3272455e5db79e4dad
 
 ## Ticket: Migration
+
 **Task**
 
 For this ticket, you'll be required to complete the command-line script located in the migrations directory of src called movie-last-updated-migration.js.
@@ -55,12 +58,14 @@ node movie-last-updated-migration.js
 **Solution**
 
 Query and projection
+
 ```
 const predicate = { lastupdated: { $type: "string", $exists: true } }
 const projection = { lastupdated: 1 }
 ```
 
 Bulk write
+
 ```
 mflix
   .collection("movies")

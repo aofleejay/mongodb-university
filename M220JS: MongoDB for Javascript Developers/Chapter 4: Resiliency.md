@@ -1,5 +1,7 @@
 # Chapter 4: Resiliency
+
 ## Ticket: Connection Pooling
+
 **Task**
 
 For this ticket, you'll be required to modify the configuration of the MongoClient to set the maximum size of the connection pool to 50 connections.
@@ -20,6 +22,7 @@ MongoClient.connect(
 5ad4f4f58d4b377bcf55d742
 
 ## Ticket: Timeouts
+
 **Task**
 
 For this ticket, you'll be required to modify the configuration of MongoClient to set a write timeout of 2500 milliseconds.
@@ -40,9 +43,10 @@ MongoClient.connect(
 5addf035498efdeb55e90b01
 
 ## Ticket: Handling Errors
+
 **Task**
 
-For this ticket, you'll be required to make the API more robust by handling exceptions. Specifically, what should happen if an incorrectly formatted _id is passed to the getMovieByID() method in moviesDAO.js?
+For this ticket, you'll be required to make the API more robust by handling exceptions. Specifically, what should happen if an incorrectly formatted \_id is passed to the getMovieByID() method in moviesDAO.js?
 
 In this case, an error will be thrown to getMovieByID() because of an invalid ID. However, the method does not need to return this error. Instead, if this error is thrown, the method should return null.
 
@@ -96,6 +100,7 @@ static async getMovieByID(id) {
 5ae9b76a703c7c603202ef22
 
 ## Ticket: Principle of Least Privilege
+
 **Task**
 
 For this ticket, you'll be required to add a new user on your Atlas cluster for the MFlix application to connect with.

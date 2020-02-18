@@ -1,4 +1,5 @@
 # Chapter 1: Introduction
+
 ## Lab 1.1: Install Course Dependencies
 
 **Problem**
@@ -24,6 +25,7 @@ db.people.count({ "email" : {"$exists": 1} })
 50474
 
 ## Lab 1.2: Install MongoDB Compass
+
 **Problem**
 
 For this optional lab you're going to install the latest stable version of MongoDB Compass. This lab is optional because Compass doesn't currently support all Linux distributions.
