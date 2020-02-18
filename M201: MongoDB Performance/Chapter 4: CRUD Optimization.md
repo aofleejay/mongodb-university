@@ -1,4 +1,5 @@
 # Chapter 4: CRUD Optimization
+
 ## Lab 4.1: Equality, Sort, Range
 
 **Problem**

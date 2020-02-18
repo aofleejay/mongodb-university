@@ -1,4 +1,5 @@
 # Chapter 3: Index Operations
+
 ## Lab 3.1: Explain Output
 
 **Problem**

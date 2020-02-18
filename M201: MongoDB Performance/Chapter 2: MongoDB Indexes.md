@@ -17,10 +17,10 @@ Which of the following queries are able to use it for both filtering and sorting
 **Answer**
 
 - [x] db.people.find({ "first_name": "Jessica" }).sort({ "address.state": 1, "address.city": 1 })
-- [ ] db.people.find({ "first_name": { $gt: "J" } }).sort({ "address.city": -1 })
+- [ ] db.people.find({ "first_name": { \$gt: "J" } }).sort({ "address.city": -1 })
 - [x] db.people.find({ "address.state": "South Dakota", "first_name": "Jessica" }).sort({ "address.city": -1 })
 - [ ] db.people.find({ "address.city": "West Cindy" }).sort({ "address.city": -1 })
-- [x] db.people.find({ "first_name": "Jessica", "address.state": { $lt: "S"} }).sort({ "address.state": 1 })
+- [x] db.people.find({ "first_name": "Jessica", "address.state": { \$lt: "S"} }).sort({ "address.state": 1 })
 
 ## Lab 2.2: Optimizing Compound Indexes
 

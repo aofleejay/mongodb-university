@@ -76,7 +76,6 @@ Which of the following update statements will correctly perform this update?
 phones.updateMany({ software_version: { "$lt": 4.0 } }, { "$set": { needs_to_update: true } })
 ```
 
-
 ## Final: Question 3
 
 **Question**
