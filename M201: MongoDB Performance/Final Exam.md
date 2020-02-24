@@ -41,3 +41,31 @@ Which of the following statements is/are true?
 - [x] It's common practice to co-locate your mongos on the same machine as your application to reduce latency.
 - [ ] Background index builds block all reads and writes to the database that holds the collection being indexed.
 - [x] Collations can be used to create case insensitive indexes.
+
+## Question 4
+
+**Problem**
+
+Which of the following statements is/are true?
+
+**Answer**
+
+- [ ] On a sharded cluster, aggregation queries using $lookup will require a merge stage on a random shard.
+- [x] Indexes are fast to search because they're ordered such that you can find target values with few comparisons.
+- [ ] Under heavy write load you should scale your read throughput by reading from secondaries.
+- [ ] When you index on a field that is an array it creates a partial index.
+- [x] Indexes can solve the problem of slow queries.
+
+## Question 5
+
+**Problem**
+
+Which of the following statements is/are true?
+
+**Answer**
+
+- [ ] By default, the explain() command will execute your query.
+- [x] Compound indexes can service queries that filter on a prefix of the index keys.
+- [ ] Compound indexes can service queries that filter on any subset of the index keys.
+- [x] If no indexes can be used then a collection scan will be necessary.
+- [x] Query plans are removed from the plan cache on index creation, destruction, or server restart.
