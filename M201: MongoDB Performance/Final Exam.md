@@ -69,3 +69,46 @@ Which of the following statements is/are true?
 - [ ] Compound indexes can service queries that filter on any subset of the index keys.
 - [x] If no indexes can be used then a collection scan will be necessary.
 - [x] Query plans are removed from the plan cache on index creation, destruction, or server restart.
+
+## Question 6
+
+**Problem**
+
+Which of the following statements is/are true?
+
+**Answer**
+
+- [x] You can use the --wiredTigerDirectoryForIndexes option to place your indexes on a different disk than your data.
+- [x] The ideal ratio between nReturned and totalKeysExamined is 1.
+- [ ] Indexes can only be traversed forward.
+- [x] An index doesn't become multikey until a document is inserted that has an array value.
+- [ ] Running performance tests from the mongo shell is an acceptable way to benchmark your database.
+
+## Question 7
+
+**Problem**
+
+Given the following indexes:
+
+1. { categories: 1, price: 1 }
+2. { in_stock: 1, price: 1, name: 1 }
+
+The following documents:
+
+1. { price: 2.99, name: "Soap", in_stock: true, categories: ['Beauty', 'Personal Care'] }
+2. { price: 7.99, name: "Knife", in_stock: false, categories: ['Outdoors'] }
+
+And the following queries:
+
+1. db.products.find({ in_stock: true, price: { $gt: 1, $lt: 5 } }).sort({ name: 1 })
+2. db.products.find({ in_stock: true })
+3. db.products.find({ categories: 'Beauty' }).sort({ price: 1 })
+
+Which of the following is/are true?
+
+**Answer**
+
+- [ ] There would be a total of 4 index keys created across all of these documents and indexes.
+- [ ] Index #2 properly uses the equality, sort, range rule for query #1.
+- [x] Index #1 would provide a sort to query #3.
+- [x] Index #2 can be used by both query #1 and #2.
