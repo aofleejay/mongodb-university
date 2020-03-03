@@ -61,3 +61,17 @@ Which of the following are use cases in which you should model your data for per
 - [x] It is expected that the solution will be designed with only 10 shards.
 - [ ] There is not an applicable design pattern to the solution.
 - [x] The application is being developed by 100 engineers.
+
+## Quiz 6: Identifying the Workload
+
+**Problem**
+
+Which of the following is not part of the first phase of the data modeling methodology?
+
+**Answer**
+
+- [x] Identifying the relationships between the units of data.
+- [ ] Listing the write operations.
+- [ ] Identifying the durability of each write operation.
+- [ ] Quantifying each of the operations in terms of latency and frequency.
+- [ ] Listing the read operations.
