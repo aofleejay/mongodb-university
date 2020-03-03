@@ -23,3 +23,17 @@ Which of the following statements are true about MongoDB documents?
 - [x] MongoDB documents have a flexible schema.
 - [ ] MongoDB documents within a collection must have the same fields.
 - [x] MongoDB documents are stored as BSON documents.
+
+## Quiz 3: Constraints in Data Modeling
+
+**Problem**
+
+Which of the following is not a usual constraint that would impact your data model for MongoDB?
+
+**Answer**
+
+- [ ] Network
+- [x] Operating System
+- [ ] Security
+- [ ] Disk Drives
+- [ ] RAM
