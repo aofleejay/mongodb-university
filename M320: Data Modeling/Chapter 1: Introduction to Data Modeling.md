@@ -49,3 +49,15 @@ Which of the following phases are included in our data modeling methodology for 
 - [x] Applying schema design patterns.
 - [x] Identifying the relationships between pieces of information.
 - [x] Identifying the workload of the system.
+
+## Quiz 5: Model for Simplicity or Performance
+
+**Problem**
+
+Which of the following are use cases in which you should model your data for performance rather than simplicity?
+
+**Answer**
+
+- [x] It is expected that the solution will be designed with only 10 shards.
+- [ ] There is not an applicable design pattern to the solution.
+- [x] The application is being developed by 100 engineers.
