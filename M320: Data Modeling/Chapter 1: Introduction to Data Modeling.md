@@ -37,3 +37,15 @@ Which of the following is not a usual constraint that would impact your data mod
 - [ ] Security
 - [ ] Disk Drives
 - [ ] RAM
+
+## Quiz 4: The Data Modeling Methodology
+
+**Problem**
+
+Which of the following phases are included in our data modeling methodology for MongoDB?
+
+**Answer**
+
+- [x] Applying schema design patterns.
+- [x] Identifying the relationships between pieces of information.
+- [x] Identifying the workload of the system.
