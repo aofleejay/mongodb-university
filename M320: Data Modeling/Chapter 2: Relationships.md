@@ -97,7 +97,7 @@ Once you've identified the ideal design, you can deepen your knowledge by trying
 
 **Answer**
 
-- [x] ![Lab one-to-one answer](/M320:%20Data%20Modeling/images/lab-one-to-one-answer.png)
+![Lab one-to-one answer](/M320:%20Data%20Modeling/images/lab-one-to-one-answer.png)
 
 ## Quiz 5: One-to-Zillions Relationship
 
